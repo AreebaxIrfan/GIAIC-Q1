@@ -1,87 +1,97 @@
-//class 09
-//function 
-//basic synthex of the function 
-//function functionName (parameter1 ,parameter2 ,parameter 3){
-    //functionbody
+//class 10
+//objext.ts
+//its the basic syntex of the object type..
+//const objectName ={
+    //key :value;
+    // ' :' its called colon
+
 //}
-function myInfo (): void{ //function declaration
-    //functionBody
-    console.log("Hi I'm a student");
-    console.log("i'm a coder")
-    console.log("---------------------------")
+//object defination:
+// the syntex of the brackets (paraenthesis) is called object literal
+let car:string ="Mehran";
+const mycar ={
+    name :"Mehran",
+    color: "white",
+    brand : "suzoki",
+    year : 2021,
 }
-//call the function first otherwise can't be excute the function
-myInfo (); //invoke function 
-myInfo ();
-myInfo ();
-console.log("-----------------");
-//function with parameter
-function myfunctionInParameter (name:string , country :string , job :string):void{
-    console.log("This is ", name);
-    console.log(`I'm from ${country}`);
-    console.log("I am a" + job)
-}
-myfunctionInParameter('sara ' , 'pakistan' , 'Software Engineer');
+console.log(mycar);   //its show to accessice the properties of the object
+console.log(mycar.brand);
+console.log(mycar["color"])//another way to excute the code..
 
-console.log("+++++++++++++++++++++++++++");
-function myfunctions(name :string , country :string , job:string = 'Software Engineer' ){
-    console.log("This is ", name);
-    console.log(`I'm from ${country}`);
-    console.log("I am a" + job)
-}
-
-myfunctions("ali" ,"Pakistan")
-console.log("+++++++++++++++++++++++++++");
-function myFunctions(name :string , country :string ,job?:string):void{
-    console.log("Hi my name is " ,name);
-    console.log(`i am from ${country}`);
-    if (job){
-        console.log("I am a" + job);
+////properties
+//the (name : value ) is called the properties..
+//method
+//a method is a function to store the property..
+console.log("------------------------------");
+const person ={
+    firstname : "Ali",
+    lastname : "Khan",
+    age : 31,
+    country :"America",
+    SkinColor:"Black",
+    fullName : function () {
+        return `Hello my name is ${this.firstname} ${this.lastname}` //template literal.
     }
-  
-}
-myFunctions("Sara" , "Korea");
-console.log("+++++++++++++++++++++++++++");
-function myfunctionsSum ( n1 :number , n2 :number):number{
-    return n1+ n2
-}
-const result :number = myfunctionsSum( 20 , 10);
-console.log(result)
-console.log("+++++++++++++++++++++++++++");
-
-toDateTime();
-
-function toDateTime(): void{
-    const date : Date =new Date();
-    console.log(date)
-}
-console.log("+++++++++++++++++++++++++++");
-const myfunctionIs = function () :void {
-    console.log("My name is Sara ");
-    console.log("I am from Iceland");
-
 };
-myfunctionIs();
+console.log(person.fullName());
+console.log("----------------");
+const pet:{
+    type :string ,
+    name :string,
+    age : number,
+    color : string,
+    SayMeow :() => string,
+}={
+    type:'Cat',
+    name:'tom',
+    age : 5,
+    color : ' white',
+    SayMeow : function (){
+        return 'meow meow';
+    }
+        
+    }
+console.log(pet.SayMeow());
+console.log("---------------------");
+interface person {
+    firstName :string,
+    lastName : string,
+    sayHello () : string,  
 
-//Arrow Function
-const myFunctionsIs = (num1 :number ,num2 :number) => num1 * num2;
-const result2 : number = myFunctionsIs (10,20);
-console.log(result2)
-console.log("+++++++++++++++++++++++++++");
-const functionsIs = (name : string , country :string , job :string)  => {
-    //functionBody
-    console.log("My name is Sara " +name);
-    console.log("I am from Iceland" +country);
-    console.log("I am at a" + job);
-};
-
-const sumAllNum = (...numbers :number[]) :number => {
-    let total :number = 0;
-    for( const number of numbers) {
-        total += number;
 
     }
-    return total; 
-}
-const result3 :number =  sumAllNum (10,20,90 );
-console.log(result3)
+const sara :person ={
+    firstName:"Kamal",
+    lastName:"Ali",
+    sayHello :function (){
+        return `Hello ,my name is ${this.firstName}`
+    }
+};
+//Enum 
+//enum is a special  (class)  that represent aa group of const and unchangable value
+//two parts of the enum and the string
+//its start with the 1 value 
+//synthex
+enum Color {         ///always default is numeric
+    Red,
+    Green,
+    voilet,
+    Black,
+    White,
+    Yellow,
+    Brown,
+};
+const myFavoiteColor:Color = Color.Black;
+console.log(myFavoiteColor)
+//fully initiaalized , initialized enum s
+
+
+
+
+
+
+console.log("------------------------------------");
+//Module.
+//javascript module will allow to break your file and also separate the code its easier to read and also to recorrect.
+//Module are import by the externally and use in your file or in the web.

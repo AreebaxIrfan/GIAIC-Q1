@@ -1,80 +1,74 @@
 "use strict";
+//class 10
+//objext.ts
+//its the basic syntex of the object type..
+//const objectName ={
+//key :value;
+// ' :' its called colon
 Object.defineProperty(exports, "__esModule", { value: true });
-//class 09
-//function 
-//basic synthex of the function 
-//function functionName (parameter1 ,parameter2 ,parameter 3){
-//functionbody
 //}
-function myInfo() {
-    //functionBody
-    console.log("Hi I'm a student");
-    console.log("i'm a coder");
-    console.log("---------------------------");
-}
-//call the function first otherwise can't be excute the function
-myInfo(); //invoke function 
-myInfo();
-myInfo();
-console.log("-----------------");
-//function with parameter
-function myfunctionInParameter(name, country, job) {
-    console.log("This is ", name);
-    console.log(`I'm from ${country}`);
-    console.log("I am a" + job);
-}
-myfunctionInParameter('sara ', 'pakistan', 'Software Engineer');
-console.log("+++++++++++++++++++++++++++");
-function myfunctions(name, country, job = 'Software Engineer') {
-    console.log("This is ", name);
-    console.log(`I'm from ${country}`);
-    console.log("I am a" + job);
-}
-myfunctions("ali", "Pakistan");
-console.log("+++++++++++++++++++++++++++");
-function myFunctions(name, country, job) {
-    console.log("Hi my name is ", name);
-    console.log(`i am from ${country}`);
-    if (job) {
-        console.log("I am a" + job);
+//object defination:
+// the syntex of the brackets (paraenthesis) is called object literal
+let car = "Mehran";
+const mycar = {
+    name: "Mehran",
+    color: "white",
+    brand: "suzoki",
+    year: 2021,
+};
+console.log(mycar); //its show to accessice the properties of the object
+console.log(mycar.brand);
+console.log(mycar["color"]); //another way to excute the code..
+////properties
+//the (name : value ) is called the properties..
+//method
+//a method is a function to store the property..
+console.log("------------------------------");
+const person = {
+    firstname: "Ali",
+    lastname: "Khan",
+    age: 31,
+    country: "America",
+    SkinColor: "Black",
+    fullName: function () {
+        return `Hello my name is ${this.firstname} ${this.lastname}`; //template literal.
     }
-}
-myFunctions("Sara", "Korea");
-console.log("+++++++++++++++++++++++++++");
-function myfunctionsSum(n1, n2) {
-    return n1 + n2;
-}
-const result = myfunctionsSum(20, 10);
-console.log(result);
-console.log("+++++++++++++++++++++++++++");
-toDateTime();
-function toDateTime() {
-    const date = new Date();
-    console.log(date);
-}
-console.log("+++++++++++++++++++++++++++");
-const myfunctionIs = function () {
-    console.log("My name is Sara ");
-    console.log("I am from Iceland");
 };
-myfunctionIs();
-//Arrow Function
-const myFunctionsIs = (num1, num2) => num1 * num2;
-const result2 = myFunctionsIs(10, 20);
-console.log(result2);
-console.log("+++++++++++++++++++++++++++");
-const functionsIs = (name, country, job) => {
-    //functionBody
-    console.log("My name is Sara " + name);
-    console.log("I am from Iceland" + country);
-    console.log("I am at a" + job);
-};
-const sumAllNum = (...numbers) => {
-    let total = 0;
-    for (const number of numbers) {
-        total += number;
+console.log(person.fullName());
+console.log("----------------");
+const pet = {
+    type: 'Cat',
+    name: 'tom',
+    age: 5,
+    color: ' white',
+    SayMeow: function () {
+        return 'meow meow';
     }
-    return total;
 };
-const result3 = sumAllNum(10, 20, 90);
-console.log(result3);
+console.log(pet.SayMeow());
+console.log("---------------------");
+const sara = {
+    firstName: "Kamal",
+    lastName: "Ali",
+    sayHello: function () {
+        return `Hello ,my name is ${this.firstName}`;
+    }
+};
+//Enum 
+//enum is a special  (class)  that represent aa group of const and unchangable value
+//two parts of the enum and the string
+//its start with the 1 value 
+//synthex
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["voilet"] = 2] = "voilet";
+    Color[Color["Black"] = 3] = "Black";
+    Color[Color["White"] = 4] = "White";
+    Color[Color["Yellow"] = 5] = "Yellow";
+    Color[Color["Brown"] = 6] = "Brown";
+})(Color || (Color = {}));
+;
+const myFavoiteColor = Color.Black;
+console.log(myFavoiteColor);
