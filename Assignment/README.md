@@ -16,6 +16,6 @@ npm start
 ```
 # 🔍 Project Showcase
 **Project	Demo**
--🏦 ATM Machine	npm run atm
--🎲 Number Guesser	npm run guess
--➕ Calculator	npm run calc
+- 🏦 ATM Machine	npm run atm
+- 🎲 Number Guesser	npm run guess
+- ➕ Calculator	npm run calc
