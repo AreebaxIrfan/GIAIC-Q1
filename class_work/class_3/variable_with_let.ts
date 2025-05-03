@@ -1,7 +1,6 @@
 //Uses of let
 let myMsg ="hi myname is isfhan ahmed";
 let mySon1 ="musa";
-let mySon = "musa";
 mySon ="haroon"; //reassign the value..
 
 console.log(mySon);

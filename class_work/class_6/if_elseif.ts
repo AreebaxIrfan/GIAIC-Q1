@@ -1,5 +1,4 @@
-const isRainy :Boolean =false;
-const isTherePost :Boolean = true;
+// if else statement
 if (isRainy && isTherePost){
     console.log("There is no Class line no 5")
 }else if (isTherePost){

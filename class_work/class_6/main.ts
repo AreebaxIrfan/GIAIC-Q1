@@ -1,6 +1,5 @@
 //if else
 //kal class huogi..
-const isRainy:boolean  = false;
 if (isRainy){
     console.log("Monday class is Off");
 }else{

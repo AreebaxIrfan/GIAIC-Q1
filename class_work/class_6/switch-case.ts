@@ -1,5 +1,4 @@
 //switc case///
-const dayNumber :number =1;
 switch(dayNumber){
     case 1:
         console.log("Monday");
