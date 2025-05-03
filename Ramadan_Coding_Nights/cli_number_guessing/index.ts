@@ -1,24 +1,33 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 import inquirer from "inquirer";
 
-//1) Computerwill generate a random number 
+async function numberGuessingGame() {
+  try {
+    console.log("Welcome to the Number Guessing Game!");
+    console.log("Guess a number between 1 and 6.");
 
-//2) Take the input to guess the number
+    const randomNumber = Math.floor(Math.random() * 6 + 1);
 
-//3)Compare user input with computer generative number 
-//and show result
-const randomNumber = Math.floor(Math.random() * 6 +1);
-console.log("Welcome..");
-const answer = await inquirer.prompt([
-    {
-        name:"userGuessNumber",
-        type:"number",
-        massage:"PLease guess the number",
-    },
-]);
-if (answer.userGuessNumber === randomNumber){
-    console.log("Congratulation !you guessed right number");
-} else {
-    console.log("You guessed the wrong number");
+    const answer = await inquirer.prompt([
+      {
+        name: "userGuessNumber",
+        type: "number",
+        message: "Please guess the number (1-6):",
+      },
+    ]);
+
+    const guess = answer.userGuessNumber;
+
+    if (!guess || isNaN(guess) || guess < 1 || guess > 6) {
+      console.log("Invalid input! Please enter a number between 1 and 6.");
+    } else if (guess === randomNumber) {
+      console.log("Congratulations! You guessed the right number!");
+    } else {
+      console.log(`Sorry, you guessed the wrong number. The number was ${randomNumber}.`);
+    }
+  } catch (error) {
+    console.error("An error occurred:", error.message);
+  }
 }
-console.log(randomNumber);
+
+numberGuessingGame();

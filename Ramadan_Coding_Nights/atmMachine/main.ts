@@ -1,57 +1,55 @@
 import inquirer from "inquirer";
 
-let myBalance = 10000; //Dollar
-let myPin = 1234;
-console.log("HI User! You are using and atm machine , if you want to withdraw or check your balance! ")
-console.log("PLease enter your pin code");
-let pinAnswer = await inquirer.prompt(
-    [
- {
-    name: "pin",
-    message: "enter your pin",
-    type: "number"
- }
-    ]
+async function atm() {
+  let myBalance = 10000; // Dollars
+  let myPin = 1234;
 
-);
-if (pinAnswer.pin === myPin){
-    console.log("Correct pin code!!!");
-    let operationAns = await  inquirer.prompt(
-        [
-            {
-                name: "operation",
-                message: "Please select one of this option",
-                type: "list",
-                choices : ["withdraw","check balance"]
-            }
-        ]
-    );
-   // console.log(operationAns);
+  console.log("Welcome! You are using an ATM machine to withdraw or check your balance.");
+  console.log("Please enter your PIN code");
 
-    if (operationAns.operation === "withdraw"){
-        let amountAns = await inquirer.prompt(
-            [
-                {
-                    name: "amount",
-                    message:"Enter your amount",
-                    type:"number"
-                }
-            ]
-        );
-        if( amountAns.amount <= myBalance){
-            myBalance -= amountAns.amount;
-            console.log("Your current Balance is :" + myBalance);
-        }else{
-            console.log("You add the unvalid value");
-        }
+  let pinAnswer = await inquirer.prompt([
+    {
+      name: "pin",
+      message: "Enter your PIN",
+      type: "number",
+    },
+  ]);
 
+  if (pinAnswer.pin === myPin) {
+    console.log("Correct PIN code!");
 
-    } else if (operationAns.operation === "check balance"){
-        console.log("Your balance is " +myBalance)
-            
+    let operationAns = await inquirer.prompt([
+      {
+        name: "operation",
+        message: "Please select an option",
+        type: "list",
+        choices: ["Withdraw", "Check Balance"],
+      },
+    ]);
+
+    if (operationAns.operation === "Withdraw") {
+      let amountAns = await inquirer.prompt([
+        {
+          name: "amount",
+          message: "Enter your amount",
+          type: "number",
+        },
+      ]);
+
+      if (!amountAns.amount || amountAns.amount <= 0) {
+        console.log("Please enter a valid amount greater than 0.");
+      } else if (amountAns.amount > myBalance) {
+        console.log("Insufficient balance.");
+      } else {
+        myBalance -= amountAns.amount;
+        console.log(`Your current balance is: ${myBalance}`);
+      }
+    } else if (operationAns.operation === "Check Balance") {
+      console.log(`Your balance is: ${myBalance}`);
     }
-
-
-}else {
-    console.log("Incorrect pin number");
+  } else {
+    console.log("Incorrect PIN.");
+  }
 }
+
+atm().catch((error) => console.error("An error occurred:", error));
