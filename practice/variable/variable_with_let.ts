@@ -1,13 +1,12 @@
-//Uses of let
-let myMsg ="hi myname is isfhan ahmed";
-let mySon1 ="musa";
-let mySon = "musa";
-mySon ="haroon"; //reassign the value..
+// Demonstrating the use of let for declaration and reassignment
+let myMessage: string = "Hi, my name is Isfhan Ahmed";
+let mySon = "Musa";
+let foodOrder = "Javed Nihari lao";
 
-console.log(mySon);
+// Reassign values
+mySon = "Haroon";
+foodOrder = "Daal Chawal lao";
 
-let myName = "Areeba Irfan";
-let zakariya = "javed nihari laa auo";
-// var zakriya = "al rehman biryani laa auo";
-zakariya = "daal chawal laa auo"
-console.log(zakariya);//haroon //daal chawal la auo
+console.log(mySon); // Output: Haroon
+console.log(myMessage); // Optional: Log the renamed variable
+console.log(foodOrder); // Output: Daal Chawal lao?
