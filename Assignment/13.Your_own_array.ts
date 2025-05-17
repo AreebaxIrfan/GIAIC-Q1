@@ -9,11 +9,6 @@
 
 // let message :string = "I Would like to buy"
 
-// console.log( vehiclesName[0] + " " + message );
-// console.log( vehiclesName[1] + " " + message );
-// console.log( vehiclesName[2] + " " + message );
-// console.log( vehiclesName[3] + " " + message );
-
 //Second Method is..
 
 let transportation :string [] = ["Toyota" ,"BMW" , " Honda" ,"Bike" ,]
