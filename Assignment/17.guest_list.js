@@ -10,9 +10,6 @@ let guestName = ["Fazal", "Ali", "Umar", "Hamza"];
 let absent_Guest = "Ali";
 let new_Guest = "Shahmeer";
 guestName[0] = new_Guest;
-// guestName.map((items) => console.log(`hello! ${items}, I am very glad to invite you to in a dinner`));
-// console.log(`Mr ${absent_Guest} is not coming to the dinner`)
-// console.log('Big News! We find big table so we invite more 3 friends');
 guestName.unshift("Bilal");
 guestName.splice(2, 0, 'Maaz');
 guestName.push('Fazal');
