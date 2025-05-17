@@ -2,11 +2,6 @@
 //Task no 17
 //Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests.
 let guestName = ["Fazal", "Ali", "Umar", "Hamza"];
-// console.log(guestName [0]);
-// console.log(guestName [1]);
-// console.log(guestName [2]);
-// console.log(guestName [3]);
-// guestName.map((items) => console.log(`hello! ${items}, I am very glad to invite you to in a dinner`));
 let absent_Guest = "Ali";
 let new_Guest = "Shahmeer";
 guestName[0] = new_Guest;
