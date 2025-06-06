@@ -4,9 +4,6 @@
 let add : number = 2+4;
 console.log(add);
 
-let sub: number = 3 - 3;
-console.log(sub);
-
 //power 
 let power : number = 2**4;
 console.log(power)
