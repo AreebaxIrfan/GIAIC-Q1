@@ -7,7 +7,5 @@ let names :string[] =[ "Ali" , "Umer" , "Bilal"  ];
 let message :string = "Do you like cartoon? ";
 
 console.log(names[0] + " " + message);
-console.log(names[1] + " " + message);
-console.log(names[2] + " " + message);
 
 
