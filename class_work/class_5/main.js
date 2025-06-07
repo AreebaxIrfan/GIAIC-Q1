@@ -3,8 +3,6 @@
 //Arthematic operator.
 var add = 2 + 4;
 console.log(add);
-var sub = 3 - 3;
-console.log(sub);
 //power 
 var power = Math.pow(2, 4);
 console.log(power);
