@@ -7,7 +7,8 @@ myName ="The Cat";
 
 let myAge: number  = 17;
 // myAge = "dist" //infer
-myAge = 35.2466;
+myAge = 35.2466
+ 
 console.log(myAge.toFixed(2)); //round off the number ..
 
 // let isJobless: boolean = false;
