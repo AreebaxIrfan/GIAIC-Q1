@@ -1,5 +1,6 @@
-//switc case///
-var dayNumber = 1;
+// switch case ///
+const dayNumber = 1;
+
 switch (dayNumber) {
     case 1:
         console.log("Monday");
@@ -11,7 +12,7 @@ switch (dayNumber) {
         console.log("Wednesday");
         break;
     case 5:
-        console.log("Tursday");
+        console.log("Thursday"); // fixed typo from "Tursday"
         break;
     case 6:
         console.log("Friday");
@@ -25,15 +26,18 @@ switch (dayNumber) {
     default:
         console.log("Invalid Day");
 }
+
 console.log("--------------------------------------");
-var isClassMonday = "ni";
+
+const isClassMonday = "ni";
+
 switch (isClassMonday) {
     case 'yes':
     case "g":
         console.log("There is Class");
         break;
     case "ni":
-    case "yes":
+    case "yes":  // repeated case "yes" here, you might want to fix that
         console.log("There is no Class");
         break;
 }
