@@ -1,9 +1,4 @@
-//modules
-// import a from "./first";
-// console.log(a);
 
-// import {job} from "./first";
-// console.log(job);
 
 
 import x,{job} from "./first.js";
