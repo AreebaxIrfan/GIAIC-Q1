@@ -1,12 +1,10 @@
-// Today learn about Variables... 11 March 2024
-// Variable means changeable.. used to store anything..
+// Today learn about variables... 11 March 2024
+// Variable means changeable.. used to store any data
 
-let zakriya = "musa";
-// zakriya = "musa"; // duplicate redeclaration removed
-zakriya = "haroon";
-console.log(zakriya); // Output: haroon
+let zakriya = "musa";  // Declare and assign
+zakriya = "haroon";    // Reassign
+console.log(zakriya);  // Output: haroon
 
-// Reassigning without redeclaring
-zakriya = "al rehman biryani laa auo";
-zakriya = "daal chawal laa auo";
-console.log(zakriya); // Output: daal chawal laa auo
+zakriya = "al rehman biryani laa auo";  // Reassign again
+zakriya = "daal chawal laa auo";        // Reassign again
+console.log(zakriya);  // Output: daal chawal laa auo
