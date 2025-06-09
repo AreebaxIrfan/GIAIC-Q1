@@ -7,6 +7,5 @@ console.log(mySon);
 
 let myName = "Areeba Irfan";
 let zakariya = "javed nihari laa auo";
-// var zakriya = "al rehman biryani laa auo";
 zakariya = "daal chawal laa auo"
 console.log(zakariya);//haroon //daal chawal la auo
