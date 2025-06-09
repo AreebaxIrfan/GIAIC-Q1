@@ -1,15 +1,20 @@
-//Today learn about the Variable...11 _Marach _2024
-//Variable means changable.. variable is used for the store any things..
-//variable with var (variable = keyword);
-var myName = "Areeba Irfan";
-var myMsg = "Hi! my name is isfhan ahmed";
-var zakriya = "musa";
-var zakriya = "musa";
-zakriya = "haroon"
-console.log(zakriya);//haroon //
+// Today learn about Variables... 11 March 2024
+// Variable means changeable.. used to store anything.
 
-var myName = "Areeba Irfan";
-var zakariya = "javed nihari laa auo";
-var zakriya = "al rehman biryani laa auo";
-zakriya = "daal chawal laa auo"
-console.log(zakriya);//haroon //daal chawal la auo
+// Use const if value won't change, let if it will change
+
+const myName = "Areeba Irfan";
+const myMsg = "Hi! my name is isfhan ahmed";
+
+let zakriya = "musa";
+// zakriya = "musa";  // duplicate declaration removed
+zakriya = "haroon";
+console.log(zakriya); // Output: haroon
+
+// Reassigning variables correctly without redeclaration
+const anotherName = "Areeba Irfan";
+const zakariya = "javed nihari laa auo";
+
+let anotherZakriya = "al rehman biryani laa auo";
+anotherZakriya = "daal chawal laa auo";
+console.log(anotherZakriya); // Output: daal chawal laa auo
