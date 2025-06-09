@@ -1,16 +1,15 @@
-//kal class huogi..
-var isRainy = false;
+// kal class huogi..
+const isRainy = false;
 if (isRainy) {
     console.log("Monday class is Off");
-}
-else {
+} else {
     console.log("there is no off");
 }
 console.log("--------------------------------------");
-var isCarPunctured = "No";
+
+let isCarPunctured = "No";
 if (isCarPunctured === "Yes") {
     console.log("I will be late for the class");
-}
-else {
+} else {
     console.log("I will be on the time");
 }
