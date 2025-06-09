@@ -1,11 +1,12 @@
-//Today learn about the Variable...11 _Marach _2024
-//Variable means changable.. variable is used for the store any things..
-//variable with var (variable = keyword);
-var zakriya = "musa";
-var zakriya = "musa";
-zakriya = "haroon"
-console.log(zakriya);//haroon //
+// Today learn about Variables... 11 March 2024
+// Variable means changeable.. used to store anything..
 
-var zakriya = "al rehman biryani laa auo";
-zakriya = "daal chawal laa auo"
-console.log(zakriya);//haroon //daal chawal la auo
+let zakriya = "musa";
+// zakriya = "musa"; // duplicate redeclaration removed
+zakriya = "haroon";
+console.log(zakriya); // Output: haroon
+
+// Reassigning without redeclaring
+zakriya = "al rehman biryani laa auo";
+zakriya = "daal chawal laa auo";
+console.log(zakriya); // Output: daal chawal laa auo
