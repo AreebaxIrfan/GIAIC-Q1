@@ -1,5 +1,6 @@
-//Repo revision
-//Maths.random that generate the random number 
-//output = consdition ? value 1 : value2
-var newAge = (Math.random() > 0.6) ? 'my age is greater than 60' : 'my age is less then 60';
+// Repo revision
+// Math.random generates a random number
+// Output = condition ? value1 : value2
+
+const newAge = (Math.random() > 0.6) ? 'my age is greater than 60' : 'my age is less than 60';
 console.log(newAge);
