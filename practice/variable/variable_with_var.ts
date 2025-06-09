@@ -7,7 +7,6 @@ const myName = "Areeba Irfan";
 const myMsg = "Hi! my name is isfhan ahmed";
 
 let zakriya = "musa";
-// zakriya = "musa";  // duplicate declaration removed
 zakriya = "haroon";
 console.log(zakriya); // Output: haroon
 
