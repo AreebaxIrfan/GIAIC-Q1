@@ -8,9 +8,6 @@ let myAge = 17;
 // myAge = "dist" //infer
 myAge = 35.2466;
 console.log(myAge.toFixed(2)); //
-// let isJobless: boolean = false;
-// // isJobless = 35  ///infere data ko dekh kar data type karta ha..
-// isJobless = true;
 console.log(myName.toUpperCase()); //THE WOLF
 //undefined
 let myplan;
