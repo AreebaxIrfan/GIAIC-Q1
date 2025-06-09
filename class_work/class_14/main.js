@@ -1,10 +1,7 @@
 "use strict";
 
 // Promise that rejects immediately
-const sirziakhan = new Promise(function (resolve, reject) {
-    // resolve('Passed'); // Uncomment if you want to resolve
-    reject('failed');
-});
+const sirziakhan = Promise.reject('failed');
 
 async function promiseStatus() {
     try {
