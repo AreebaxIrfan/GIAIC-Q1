@@ -3,11 +3,6 @@
 // object.ts
 // This is the basic syntax of the object type.
 
-// const objectName = {
-//    key: value
-// }
-// ':' is called colon
-
 // Object definition:
 // The syntax of the brackets (parenthesis) is called object literal
 
@@ -63,20 +58,35 @@ const sara = {
     }
 };
 
-// Enum 
+// Enum
 // Enum is a special class that represents a group of constants (unchangeable values)
 // It starts with the 0 value by default
 
 let Color;
 (function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Violet"] = 2] = "Violet";
-    Color[Color["Black"] = 3] = "Black";
-    Color[Color["White"] = 4] = "White";
-    Color[Color["Yellow"] = 5] = "Yellow";
-    Color[Color["Brown"] = 6] = "Brown";
+    Color["Red"] = 0;              // Assignment extracted here
+    Color[0] = "Red";
+
+    Color["Green"] = 1;
+    Color[1] = "Green";
+
+    Color["Violet"] = 2;
+    Color[2] = "Violet";
+
+    Color["Black"] = 3;
+    Color[3] = "Black";
+
+    Color["White"] = 4;
+    Color[4] = "White";
+
+    Color["Yellow"] = 5;
+    Color[5] = "Yellow";
+
+    Color["Brown"] = 6;
+    Color[6] = "Brown";
 })(Color || (Color = {}));
 
 const myFavoriteColor = Color.Black;
-console.log(myFavoriteColor);
+console.log(myFavoriteColor); // Output: 3
+console.log(Color.Red);       // Output: 0
+console.log(Color[0]);        // Output: "Red"
