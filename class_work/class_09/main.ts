@@ -20,22 +20,19 @@ myInfo();
 console.log("-----------------");
 
 // function with parameters
-function myfunctionInParameter(name: string, country: string, job: string): void {
+function printUserInfo(name: string, country: string, job: string): void {
     console.log("This is ", name);
     console.log(`I'm from ${country}`);
     console.log("I am a " + job);
 }
-myfunctionInParameter('sara', 'pakistan', 'Software Engineer');
+printUserInfo('sara', 'pakistan', 'Software Engineer');
 
 console.log("+++++++++++++++++++++++++++");
 
-function myfunctions(name: string, country: string, job: string = 'Software Engineer'): void {
-    console.log("This is ", name);
-    console.log(`I'm from ${country}`);
-    console.log("I am a " + job);
+function printUserProfile(name: string, country: string, job: string = 'Software Engineer'): void {
+    console.log(`User Profile: ${name}, from ${country}, works as a ${job}.`);
 }
-
-myfunctions("ali", "Pakistan");
+printUserProfile("ali", "Pakistan");
 
 console.log("+++++++++++++++++++++++++++");
 
@@ -46,7 +43,6 @@ function myFunctions(name: string, country: string, job?: string): void {
         console.log("I am a " + job);
     }
 }
-
 myFunctions("Sara", "Korea");
 
 console.log("+++++++++++++++++++++++++++");
@@ -54,7 +50,6 @@ console.log("+++++++++++++++++++++++++++");
 function myfunctionsSum(n1: number, n2: number): number {
     return n1 + n2;
 }
-
 const result: number = myfunctionsSum(20, 10);
 console.log(result);
 
