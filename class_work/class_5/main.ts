@@ -1,52 +1,54 @@
-//operator in typescript.. (25 march 2024).
-//operators allow us to perform operations on variable and values.
-//Arthematic operator.
-let add : number = 2+4;
-console.log(add);
+// Operator examples in TypeScript (25 March 2024)
+// Operators allow us to perform operations on variables and values.
 
-//power 
-let power : number = 2**4;
-console.log(power)
+// Arithmetic operators
+const add: number = 2 + 4;
+console.log("Addition:", add); // 6
 
-//assigment operator..
-//post peri
-let x = 10;
+// Power
+const power: number = 2 ** 4;
+console.log("Power (2^4):", power); // 16
+
+// Assignment operators
+let x: number = 10;
 x += 5;
-console.log(x);
-//by sir isfhan
+console.log("After += 5:", x); // 15
 
-let pizzaprice : number =1000;//long way code
-let tax =150;
-let total = pizzaprice + tax;
-console.log(total);
+// Example: Pizza price calculation
+const pizzaPrice: number = 1000;
+const tax: number = 150;
+const total: number = pizzaPrice + tax;
+console.log("Total pizza price (long way):", total); // 1150
 
-let pizzaprices: number =1000;
-let taxs :number =150;
-pizzaprices += taxs;
-console.log("Pizza Prices =", pizzaprices );
+let pizzaPrices: number = 1000;
+const taxes: number = 150;
+pizzaPrices += taxes;
+console.log("Pizza Prices (using +=):", pizzaPrices); // 1150
 
-//Comperison Method..(Operator)
-let dataBasePassword : string ="12345"; //when we store this password
-let resentlyusedthepassword : any = 12345; //"123456"
-console.log(dataBasePassword == resentlyusedthepassword );
-console.log(dataBasePassword === resentlyusedthepassword );
+// Comparison operators
+const dataBasePassword: string = "12345";
+const recentlyUsedPassword: string = "12345"; // Changed to string for consistency
+console.log("Loose equality (==):", dataBasePassword == recentlyUsedPassword); // true
+console.log("Strict equality (===):", dataBasePassword === recentlyUsedPassword); // true
 
-//not equal
-let password :string ="12345";
-let confirmpassword :string ="12345";
-console.log('line no 40', password!=password);
-console.log('line no 41' , password !== password);
-//Comparison..
-let text1 ="A";
-let text2 ="B";
-let result = text1 > text2;
-console.log(result);
+// Not equal comparisons
+const password: string = "12345";
+const confirmPassword: string = "12345";
+console.log("Not equal (!=):", password != confirmPassword); // false
+// Note: Use Number.isNaN() for checking NaN in numeric operations, e.g., Number.isNaN(x) instead of x !== x
+// Example: if (Number.isNaN(x)) { console.log("x is NaN"); }
+console.log("Strict not equal (!==):", password !== confirmPassword); // false
 
-let answer :string ="correct";
-if (answer === "correct"){
-    console.log("you get the correct")
-}else {
-    console.log("you are wrong")
+// Comparison operators (strings)
+const text1: string = "A";
+const text2: string = "B";
+const result: boolean = text1 > text2; // Lexicographical comparison
+console.log("Is A > B?", result); // false
+
+// Conditional logic
+const answer: string = "correct";
+if (answer === "correct") {
+    console.log("You got it correct!");
+} else {
+    console.log("You are wrong");
 }
-
-
