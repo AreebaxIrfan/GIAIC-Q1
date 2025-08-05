@@ -22,8 +22,8 @@ const total: number = pizzaPrice + tax;
 console.log("Total pizza price (long way):", total); // 1150
 
 let pizzaPrices: number = 1000;
-const taxs: number = 150;
-pizzaPrices += taxs;
+const taxes: number = 150;
+pizzaPrices += taxes;
 console.log("Pizza Prices (using +=):", pizzaPrices); // 1150
 
 // Comparison operators
@@ -35,10 +35,10 @@ console.log("Strict equality (===):", dataBasePassword === recentlyUsedPassword)
 // Not equal comparisons
 const password: string = "12345";
 const confirmPassword: string = "12345";
-console.log("Not equal (!=):", password != confirmPassword); // false
-console.log("Strict not equal (!==):", password !== confirmPassword); // false
+console.log("Not equal (!=):", password != confirmPassword); // false (corrected to compare password and confirmPassword)
 // Note: Use Number.isNaN() for checking NaN in numeric operations, e.g., Number.isNaN(x) instead of x !== x
 // Example: if (Number.isNaN(x)) { console.log("x is NaN"); }
+console.log("Strict not equal (!==):", password !== confirmPassword); // false
 
 // Comparison operators (strings)
 const text1: string = "A";
