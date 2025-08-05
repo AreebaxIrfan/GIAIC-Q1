@@ -1,7 +1,7 @@
 "use strict";
 
-// Promise that rejects immediately
-const sirziakhan = Promise.reject('failed');
+// Promise that rejects immediately with an Error
+const sirziakhan = Promise.reject(new Error('failed'));
 
 async function promiseStatus() {
     try {
