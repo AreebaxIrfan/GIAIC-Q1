@@ -1,5 +1,7 @@
-///promise
-let sirziakhan = Promise.reject('failed');
+"use strict";
+
+// Promise that rejects immediately with an Error
+let sirziakhan = Promise.reject(new Error('failed'));
 
 async function promiseStatus() {
     try {
