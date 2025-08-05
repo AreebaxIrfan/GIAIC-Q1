@@ -1,97 +1,80 @@
-//class 10
-//objext.ts
-//its the basic syntex of the object type..
-//const objectName ={
-    //key :value;
-    // ' :' its called colon
+"use strict";
+// Task: Demonstrate object types, methods, interfaces, and enums in TypeScript
 
-//}
-//object defination:
-// the syntex of the brackets (paraenthesis) is called object literal
-let car:string ="Mehran";
-const mycar ={
-    name :"Mehran",
+// Object definition using object literal
+const car: string = "Mehran";
+const myCar = {
+    name: "Mehran",
     color: "white",
-    brand : "suzoki",
-    year : 2021,
-}
-console.log(mycar);   //its show to accessice the properties of the object
-console.log(mycar.brand);
-console.log(mycar["color"])//another way to excute the code..
+    brand: "suzuki",
+    year: 2021,
+};
+console.log(myCar); // Access object properties
+console.log(myCar.brand);
+console.log(myCar["color"]); // Alternative way to access properties
 
-////properties
-//the (name : value ) is called the properties..
-//method
-//a method is a function to store the property..
+// Object with method
 console.log("------------------------------");
-const person ={
-    firstname : "Ali",
-    lastname : "Khan",
-    age : 31,
-    country :"America",
-    SkinColor:"Black",
-    fullName : function () {
-        return `Hello my name is ${this.firstname} ${this.lastname}` //template literal.
+const person = {
+    firstName: "Ali",
+    lastName: "Khan",
+    age: 31,
+    country: "America",
+    skinColor: "Black",
+    fullName: function () {
+        return `Hello, my name is ${this.firstName} ${this.lastName}`; // Template literal
     }
 };
 console.log(person.fullName());
+
 console.log("----------------");
-const pet:{
-    type :string ,
-    name :string,
-    age : number,
-    color : string,
-    SayMeow :() => string,
-}={
-    type:'Cat',
-    name:'tom',
-    age : 5,
-    color : ' white',
-    SayMeow : function (){
-        return 'meow meow';
+const pet: {
+    type: string,
+    name: string,
+    age: number,
+    color: string,
+    sayMeow: () => string,
+} = {
+    type: "Cat",
+    name: "Tom",
+    age: 5,
+    color: "white",
+    sayMeow: function () {
+        return "meow meow";
     }
-        
-    }
-console.log(pet.SayMeow());
+};
+console.log(pet.sayMeow());
+
 console.log("---------------------");
-interface person {
-    firstName :string,
-    lastName : string,
-    sayHello () : string,  
+// Interface with PascalCase naming
+interface Person {
+    firstName: string;
+    lastName: string;
+    sayHello: () => string;
+}
 
-
-    }
-const sara :person ={
-    firstName:"Kamal",
-    lastName:"Ali",
-    sayHello :function (){
-        return `Hello ,my name is ${this.firstName}`
+const sara: Person = {
+    firstName: "Kamal",
+    lastName: "Ali",
+    sayHello: function () {
+        return `Hello, my name is ${this.firstName}`;
     }
 };
-//Enum 
-//enum is a special  (class)  that represent aa group of const and unchangable value
-//two parts of the enum and the string
-//its start with the 1 value 
-//synthex
-enum Color {         ///always default is numeric
-    Red,
-    Green,
-    voilet,
-    Black,
-    White,
-    Yellow,
-    Brown,
-};
-const myFavoiteColor:Color = Color.Black;
-console.log(myFavoiteColor)
-//fully initiaalized , initialized enum s
+console.log(sara.sayHello());
 
-
-
-
-
+console.log("---------------------");
+// Enum: Represents a group of constant values
+enum Color {
+    Red,    // 0
+    Green,  // 1
+    Violet, // 2
+    Black,  // 3
+    White,  // 4
+    Yellow, // 5
+    Brown   // 6
+}
+const myFavoriteColor: Color = Color.Black;
+console.log(myFavoriteColor); // Outputs: 3
 
 console.log("------------------------------------");
-//Module.
-//javascript module will allow to break your file and also separate the code its easier to read and also to recorrect.
-//Module are import by the externally and use in your file or in the web.
+// Note: Modules can be used to separate code for better readability and reusability.
